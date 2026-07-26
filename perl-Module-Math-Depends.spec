@@ -1,15 +1,13 @@
 %define upstream_name    Module-Math-Depends
-%define upstream_version 0.02
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.02
+Release:	7
 
 Summary:	Convenience object for manipulating module dependencies
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Module-Math-Depends
-Source0:	https://cpan.metacpan.org/authors/id/A/AD/ADAMK/Module-Math-Depends-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AD/ADAMK/Module-Math-Depends-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -25,7 +23,7 @@ Module::Inspector manpage but released seperately, in the hope that people
 might find it useful in other contexts.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -49,9 +47,7 @@ make test
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.20.0-1mdv2011.0
 + Revision: 403867
-- rebuild using %%perl_convert_version
-
-* Sat Aug 30 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.02-1mdv2009.0
+- rebuild using %0.02 Sat Aug 30 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 0.02-1mdv2009.0
 + Revision: 277636
 - import perl-Module-Math-Depends
 
